@@ -26,6 +26,6 @@ lazy val catsProject = Project("cats", file("cats"))
     ).map(_ % catsVersion)
   )
 
-lazy val rootProject = Project("demo-root", file("."))
+lazy val rootProject = Project("examples", file("."))
   .settings(commonSettings)
   .aggregate(circeProject, catsProject)

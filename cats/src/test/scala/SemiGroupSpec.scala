@@ -34,6 +34,7 @@ class SemiGroupSpec extends flatspec.AnyFlatSpec with Matchers{
 
   "option" should "combine for \"some\" case" in {
     assert(Semigroup[Option[Int]].combine(Some(10), None).contains(10))
+    Semigroup[Option[Int]].combine(Some(1), Some(2)) should equal(Some(3))
   }
 
   "function" should "combine the transformed value" in {
